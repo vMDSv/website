@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;700&family=Exo+2:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+
+    <meta charset="UTF-8">
+    <title>Najłatwiejsze postacie LOL</title>
+    <link rel="icon" type="image/x-icon" href="im/lol.png">
+    <meta name="keywords" content="LOL, League of Legends, poradnik lol">
+</head>
+<body class="fade-in">
+    <header class="main-header">
+        <h1>Znajdź Swoją Idealną Postać na Każdą Linię w League of Legends!</h1>
+        <p>Prosty przewodnik z postaciami łatwymi do opanowania dla nowych graczy.</p>
+    </header>
+    
+    <div class="sidenav">
+        <ul>
+            <h1>Menu</h1>
+            <li><a href="TOP.html" class="link">
+                <img src="im/top.png" alt="TOP">
+                <span>TOP</span>
+            </a></li>
+            <li><a href="JUNGLE.html" class="link">
+                <img src="im/jg.png" alt="JUNGLE">
+                <span>JUNGLE</span>
+            </a></li>
+            <li><a href="MID.html" class="link">
+                <img src="im/mid.png" alt="MID">
+                <span>MID</span>
+            </a></li>
+            <li><a href="BOT.html" class="link">
+                <img src="im/bot.png" alt="BOTTOM">
+                <span>BOTTOM</span>
+            </a></li>
+            <li><a href="SUP.html" class="link">
+                <img src="im/sup.png" alt="SUPPORT">
+                <span>SUPPORT</span>
+            </a></li>
+            <li>
+                <a href="#" id="music-button" class="link">
+                    <img src="im/nuta.png" alt="Włącz muzykę" class="music-icon">
+                    <span>MUZA</span>
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+
+    <div class="rain-container"></div>
+
+    <div id="music-notes-container"></div>
+
+    <!-- Clock Container -->
+    <div class="clock-container">
+        <div class="date" id="date">SUNDAY</div>
+        <div class="time-info">
+            <div class="date-detail" id="date-detail">17 NOV 2024</div>
+            <div class="time" id="time">08:39</div>
+        </div>
+    </div>
+
+    <script>
+    // Clock script
+    function updateClock() {
+        const days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
+        const now = new Date();
+        const day = days[now.getDay()];
+        const date = now.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase();
+        const time = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+
+        document.getElementById('date').textContent = day;
+        document.getElementById('date-detail').textContent = date;
+        document.getElementById('time').textContent = time;
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+    updateClock();
+    </script>
+
+    <script>
+    const musicNotesContainer = document.getElementById('music-notes-container');
+    const noteImages = ['im/note1.png', 'im/note2.png', 'im/note3.png', 'im/note4.png']; // Ścieżki do obrazków nutek
+    
+    function createMusicNote() {
+        const img = document.createElement('img');
+        img.src = noteImages[Math.floor(Math.random() * noteImages.length)]; // Wybieranie losowego obrazka
+        img.classList.add('music-note');
+        
+        // Ustawienie losowej pozycji startowej
+        img.style.left = Math.random() * 100 + 'vw'; // Losowa pozycja horyzontalna
+        img.style.animationDuration = Math.random() * 3 + 2 + 's'; // Losowa prędkość spadania
+    
+        musicNotesContainer.appendChild(img);
+    
+        // Usuń nutkę, gdy skończy animację
+        setTimeout(() => {
+            img.remove();
+        }, 5000); // 5 sekund odpowiada animacji
+    }
+    
+    // Funkcje odtwarzania i zatrzymywania muzyki
+    let audio = new Audio('im/pif.mp3'); // Zmień na ścieżkę do pliku muzycznego
+
+    function playMusic() {
+        audio.play();
+        audio.loop = true; 
+    }
+
+    function stopMusic() {
+        audio.pause();
+    }
+
+    // Wywołuj nutki co 500 ms
+    let musicPlaying = false;
+    let noteInterval;
+    
+    document.getElementById('music-button').addEventListener('click', function(e) {
+        e.preventDefault(); // Aby nie ładowało się z powrotem na górę strony
+
+        if (!musicPlaying) {
+            noteInterval = setInterval(createMusicNote, 200);
+            playMusic();
+            musicPlaying = true;
+        } else {
+            clearInterval(noteInterval);
+            stopMusic();
+            musicPlaying = false;
+        }
+    });
+    
+    const rainContainer = document.querySelector('.rain-container');
+
+    for (let i = 0; i < 100; i++) { // Adjust number for more or fewer drops
+        const drop = document.createElement('div');
+        drop.classList.add('rain-drop');
+        drop.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+        drop.style.animationDuration = (Math.random() * 2 + 1) + 's'; // Random speed
+        drop.style.animationDelay = Math.random() * 2 + 's'; // Random delay
+        rainContainer.appendChild(drop);
+    }
+
+
+</script>
+
+
+
+<div class="footer">
+    <!-- Left Section: Window Dimensions -->
+    <div class="footer-left">
+        <p id="window-dimensions"></p>
+    </div>
+
+    <!-- Center Section: Visit Counter -->
+    <div class="footer-center">
+        <p id="visit-counter"></p>
+    </div>
+
+    <!-- Right Section: Author Information -->
+    <div class="footer-right">
+        <h1>Autor: Maciej i Maks</h1>
+    </div>
+
+    <!-- JavaScript for Dynamic Content -->
+    <script>
+        // Display window dimensions
+        document.getElementById("window-dimensions").innerHTML =
+            "Szerokość okna: " + window.innerWidth + "px<br>" +
+            "Wysokość okna: " + window.innerHeight + "px";
+
+        // Initialize visit counter from localStorage or start at 0
+        let visitCount = localStorage.getItem('visitCount');
+        if (visitCount === null) {
+            visitCount = 0;
+        }
+
+        // Increment the visit count
+        visitCount++;
+
+        // Save updated visit count back to localStorage
+        localStorage.setItem('visitCount', visitCount);
+
+        // Display the visit count
+        document.getElementById("visit-counter").innerHTML = "Liczba odwiedzin: " + visitCount;;
+    </script>
+</div>
+
+    <script>
+    document.querySelectorAll('.link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.body.classList.add('fade-out'); // Uruchom animację
+
+            // Natychmiastowa nawigacja do nowej strony (bez czekania na koniec animacji)
+            window.location.href = link.getAttribute('href');
+        });
+    });
+    
+    // Animacja fade-in przy załadowaniu strony
+    window.onload = function() {
+        document.body.classList.add('active');
+    };
+    </script>
+    <script>
+    // Zliczanie odwiedzin
+    let visitCount = localStorage.getItem('visitCount') ? parseInt(localStorage.getItem('visitCount')) : 0;
+    visitCount++; // Zwiększ licznik o 1
+    localStorage.setItem('visitCount', visitCount); // Zapisz nową wartość do localStorage
+
+    // Wyświetlenie liczby odwiedzin w stopce
+    document.getElementById('visit-counter').innerText = 'Liczba odwiedzin: ' + visitCount;
+    </script>
+
+    <script>
+        // Function to detect if the device is a phone or tablet
+        function detectDevice() {
+            const width = window.innerWidth;
+            const isPhone = width <= 1024; // Devices with width 480px or less are considered phones
+            const isTablet = width > 1024 && width <= 1280; // Devices between 481px and 768px are considered tablets
+    
+            const sidenav = document.querySelector('.sidenav');
+            const content = document.querySelector('.content');
+    
+            // Adjust styles based on device type
+            if (isPhone) {
+                applyPhoneStyles(sidenav, content);
+            } else if (isTablet) {
+                applyTabletStyles(sidenav, content);
+            } else {
+                applyDesktopStyles(sidenav, content);
+            }
+        }
+    
+        // Styles for phones
+        function applyPhoneStyles(sidenav, content) {
+            sidenav.style.width = "100%";
+            sidenav.style.height = "auto";
+            sidenav.style.position = "absolute";
+            sidenav.style.top = "0";
+            sidenav.style.left = "0";
+            sidenav.style.transition = "none"; // Remove hover transition
+            sidenav.style.boxShadow = "none";
+    
+            const links = sidenav.querySelectorAll('a');
+            links.forEach(link => {
+                link.style.padding = "10px";
+                link.style.fontSize = "12px";
+            });
+    
+            const images = sidenav.querySelectorAll('img');
+            images.forEach(img => {
+                img.style.width = "20px";
+                img.style.height = "20px";
+            });
+    
+            content.style.marginTop = "60px"; // Push content down
+            content.style.marginLeft = "0"; // Full-width content
+        }
+    
+        // Styles for tablets
+        function applyTabletStyles(sidenav, content) {
+            sidenav.style.width = "80px";
+            sidenav.style.position = "absolute";
+            sidenav.style.height = "100vh";
+    
+            const links = sidenav.querySelectorAll('a');
+            links.forEach(link => {
+                link.style.padding = "15px";
+                link.style.fontSize = "14px";
+            });
+    
+            const images = sidenav.querySelectorAll('img');
+            images.forEach(img => {
+                img.style.width = "30px";
+                img.style.height = "30px";
+            });
+    
+            content.style.marginLeft = "80px";
+        }
+    
+
+    
+        // Call detectDevice on page load and resize
+        window.addEventListener('load', detectDevice);
+        window.addEventListener('resize', detectDevice);
+    </script>
+    
+
+
+
+
+</body>
+</html>

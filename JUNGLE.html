@@ -1,0 +1,350 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Jungle</title>
+<link rel="icon" type="image/x-icon" href="im\lol.png">
+<meta name="keywords" content="LOL, League of Legends, poradnik lol">
+<style>
+    /* Stylizacja dla sekcji z dwoma kolumnami */
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .garen-section {
+        text-align: center;
+        width: 48%; /* Połowa szerokości dla lewej i prawej kolumny */
+    }
+</style>
+</head>
+<body class="fade-in">
+    <div class="sidenav">
+        <ul>
+          <h1>Menu</h1>
+          <li>
+            <a href="index.html" class="link">
+              <img src="im/lol.png" alt="MAIN">
+              <span>MAIN</span>
+            </a>
+            <li><a href="TOP.html" class="link">
+                <img src="im/top.png" alt="TOP">
+                <span>TOP</span>
+                </a></li>
+                <li><a href="MID.html" class="link">
+                    <img src="im/mid.png" alt="MID">
+                    <span>MID</span>
+                </a></li>
+                <li><a href="BOT.html" class="link">
+                    <img src="im/bot.png" alt="BOTTOM">
+                    <span>BOTTOM</span>
+                </a></li>
+                <li><a href="SUP.html" class="link">
+                    <img src="im/sup.png" alt="SUPPORT">
+                    <span>SUPPORT</span>
+                </a></li>
+                <li>
+                    <a href="#" id="music-button" class="link">
+                        <img src="im/nuta.png" alt="Włącz muzykę" class="music-icon">
+                        <span>MUZA</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <<div id="music-notes-container"></div>
+
+        <div class="content">
+            <!-- Lewa kolumna: Garen i umiejętności -->
+            <div class="garen-section">
+                <h1> <img src="im/amu.png" alt="GAREN" height="500px" width="450px" class="icon"></h1>
+    
+                <p>
+                    <img src="im/amup.png" alt="AMUMUP" height="75px" width="75px" class="skill-icon" data-text=
+                    "Podstawowe ataki Amumu nakładają efekt Klątwy na 3 sekundy. Oznaczony cel otrzymuje dodatkowo 10% nieuchronnych obrażeń za każdym razem, gdy otrzymuje obrażenia magiczne." data-target="left-description"> &nbsp;
+                
+                    <img src="im/amuq.png" alt="AMUMUQ" height="75px" width="75px" class="skill-icon" data-text=
+                    "Aktywna: Amumu rzuca lepkim bandażem w cel, ogłuszając go na 1 sekundę i zadając obrażenia magiczne, jednocześnie przyciągając się do niego.
+                    Obrażenia magiczne: 80 / 130 / 180 / 230 / 280 (+70% mocy umiejętności)." data-target="left-description"> &nbsp;
+                
+                    <img src="im/amuw.png" alt="AMUMUW" height="75px" width="75px" class="skill-icon" data-text=
+                    "Przełączana: Amumu wpada w rozpacz i powoduje, że pobliscy wrogowie otrzymują obrażenia magiczne równe procentowi ich całkowitego zdrowia oraz podstawowej wartości obrażeń. Rozpacz odnawia Klątwę Smutnej Mumii na wszystkich trafionych wrogach.
+                    Obrażenia magiczne na sekundę: 10 / 15 / 20 / 25 / 30 (+1-2% maksymalnego zdrowia celu, zależnie od poziomu) (+1% za każde 100 mocy umiejętności)." data-target="left-description"> &nbsp;
+                
+                    <img src="im/amue.png" alt="AMUMUE" height="75px" width="75px" class="skill-icon" data-text=
+                    "Bierna: Amumu otrzymuje zmniejszone obrażenia fizyczne.
+                    Zmniejszone obrażenia fizyczne: 2 / 4 / 6 / 8 / 10.
+                    Aktywna: Amumu zadaje obrażenia magiczne wrogom w okolicy. Za każdym razem, gdy zostanie trafiony, czas odnowienia tej umiejętności zmniejsza się o 0,5 sekundy.
+                    Obrażenia magiczne: 75 / 100 / 125 / 150 / 175 (+50% mocy umiejętności)." data-target="left-description"> &nbsp;
+                
+                    <img src="im/amur.png" alt="AMUMUR" height="75px" width="75px" class="skill-icon" data-text=
+                    "R: Klątwa Smutnej Mumii
+                    Aktywna: Amumu oplątuje w bandaże przeciwników znajdujących się wokół, zadając obrażenia magiczne i unieruchamiając ich na 2 sekundy. Nakłada efekt Klątwy Smutnej Mumii na wrogów po zadaniu obrażeń.
+                    Obrażenia magiczne: 150 / 250 / 350 (+80% mocy umiejętności)." data-target="left-description">
+                </p>
+    
+                <!-- Kontener na dynamiczny opis pod obrazkami -->
+                <div id="left-description" class="skill-description"></div>
+            </div>
+    
+            <!-- Prawa kolumna: Drugi Garen i umiejętności -->
+            <div class="garen-section">
+                <h1> <img src="im/master.png" alt="GAREN" height="500px" width="450px" class="icon"></h1>
+    
+                <p>
+                    <img src="im/masterp.png" alt="MASTERYP" height="75px" width="75px" class="skill-icon" data-text=
+                    "Co 4. podstawowy atak, Master Yi uderza dwukrotnie. Drugi atak zadaje 50% obrażeń ataku, ale nakłada efekty przy trafieniu. Licznik resetuje się, jeśli Master Yi nie zadał lub nie otrzymał obrażeń przez ostatnie 4 sekundy." data-target="right-description"> &nbsp;
+                
+                    <img src="im/masterq.png" alt="MASTERYQ" height="75px" width="75px" class="skill-icon" data-text=
+                    "Aktywna: Master Yi staje się niewrażliwy i przemieszcza się po polu bitwy, zadając obrażenia fizyczne maksymalnie 4 wrogim jednostkom.
+                    Obrażenia fizyczne: 25 / 60 / 95 / 130 / 165 (+100% obrażeń ataku).
+                    Stwory i potwory otrzymują dodatkowe obrażenia.
+                    Cios Alfa może trafić krytycznie, zadając dodatkowe 60% obrażeń ataku. Podstawowe ataki skracają czas odnowienia tej umiejętności o 1 sekundę." data-target="right-description"> &nbsp;
+                
+                    <img src="im/masterw.png" alt="MASTERYW" height="75px" width="75px" class="skill-icon" data-text=
+                    "Aktywna: Master Yi koncentruje się przez 4 sekundy, odzyskując zdrowie na sekundę. Ilość uzdrawiania jest zwiększana o 1% za każdy brakujący 1% zdrowia.
+                    Leczenie na sekundę: 30 / 50 / 70 / 90 / 110 (+25% mocy umiejętności).
+                    Podczas medytacji, Master Yi otrzymuje zredukowane obrażenia.
+                    Redukcja obrażeń: 55 / 55 / 60 / 65 / 70%." data-target="right-description"> &nbsp;
+                                    
+                    <img src="im/mastere.png" alt="MASTERYE" height="75px" width="75px" class="skill-icon" data-text=
+                    "Aktywna: Master Yi otrzymuje bonus do obrażeń ataku, gdy umiejętność jest aktywna.
+                    Bonus do obrażeń: 10% obrażeń ataku." data-target="right-description"> &nbsp;
+                
+                    <img src="im/masterr.png" alt="MASTERYR" height="75px" width="75px" class="skill-icon" data-text=
+                    "Bierna: Zabójstwo bohatera lub asysta skraca czas odnowienia pozostałych umiejętności o 70%.
+                    Aktywna: Master Yi zyskuje bonus do prędkości ruchu i ataku przez 7 sekund oraz jest odporny na efekty spowalniające.
+                    Prędkość ruchu: 25 / 35 / 45%.
+                    Prędkość ataku: 30 / 55 / 80%." data-target="right-description">
+                </p>
+    
+                <!-- Kontener na dynamiczny opis pod obrazkami -->
+                <div id="right-description" class="skill-description"></div>
+            </div>
+        </div>
+    
+        <div class="footer">
+            <!-- Left Section: Window Dimensions -->
+            <div class="footer-left">
+                <p id="window-dimensions"></p>
+            </div>
+        
+            <!-- Center Section: Visit Counter -->
+            <div class="footer-center">
+                <p id="visit-counter"></p>
+            </div>
+        
+            <!-- Right Section: Author Information -->
+            <div class="footer-right">
+                <h1>Autor: Maciej i Maks</h1>
+            </div>
+        
+            <!-- JavaScript for Dynamic Content -->
+            <script>
+                // Display window dimensions
+                document.getElementById("window-dimensions").innerHTML =
+                    "Szerokość okna: " + window.innerWidth + "px<br>" +
+                    "Wysokość okna: " + window.innerHeight + "px";
+        
+                // Initialize visit counter from localStorage or start at 0
+                let visitCount = localStorage.getItem('visitCount');
+                if (visitCount === null) {
+                    visitCount = 0;
+                }
+        
+                // Increment the visit count
+                visitCount++;
+        
+                // Save updated visit count back to localStorage
+                localStorage.setItem('visitCount', visitCount);
+        
+                // Display the visit count
+                document.getElementById("visit-counter").innerHTML = "Liczba odwiedzin: " + visitCount;;
+            </script>
+        </div>
+        <script>
+
+            
+            const musicNotesContainer = document.getElementById('music-notes-container');
+            const noteImages = ['im/note1.png', 'im/note2.png', 'im/note3.png', 'im/note4.png']; // Ścieżki do obrazków nutek
+            
+            function createMusicNote() {
+                const img = document.createElement('img');
+                img.src = noteImages[Math.floor(Math.random() * noteImages.length)]; // Wybieranie losowego obrazka
+                img.classList.add('music-note');
+                
+                // Ustawienie losowej pozycji startowej
+                img.style.left = Math.random() * 100 + 'vw'; // Losowa pozycja horyzontalna
+                img.style.animationDuration = Math.random() * 3 + 2 + 's'; // Losowa prędkość spadania
+            
+                musicNotesContainer.appendChild(img);
+            
+                // Usuń nutkę, gdy skończy animację
+                setTimeout(() => {
+                    img.remove();
+                }, 5000); // 5 sekund odpowiada animacji
+            }
+            
+            // Funkcje odtwarzania i zatrzymywania muzyki
+            let audio = new Audio('im/pif.mp3'); // Zmień na ścieżkę do pliku muzycznego
+        
+            function playMusic() {
+                audio.play();
+            	audio.loop = true; 
+	    }
+        
+            function stopMusic() {
+                audio.pause();
+            }
+        
+            // Wywołuj nutki co 500 ms
+            let musicPlaying = false;
+            let noteInterval;
+            
+            document.getElementById('music-button').addEventListener('click', function(e) {
+                e.preventDefault(); // Aby nie ładowało się z powrotem na górę strony
+        
+                if (!musicPlaying) {
+                    noteInterval = setInterval(createMusicNote, 200);
+                    playMusic();
+                    musicPlaying = true;
+                } else {
+                    clearInterval(noteInterval);
+                    stopMusic();
+                    musicPlaying = false;
+                }
+            });
+            
+    
+        
+            // Funkcja do dynamicznej zmiany tekstu przy kliknięciu na obrazki
+    const skillIcons = document.querySelectorAll('.skill-icon');
+    
+    // Ukryj kontenery opisu na początku
+    document.getElementById('left-description').style.display = 'none';
+    document.getElementById('right-description').style.display = 'none';
+    
+    skillIcons.forEach(function(icon) {
+        // Gdy użytkownik klika na obrazek
+        icon.addEventListener('click', function() {
+            const text = icon.getAttribute('data-text');
+            const target = icon.getAttribute('data-target'); // Pobierz identyfikator kontenera opisu
+            const descriptionBox = document.getElementById(target); // Pobierz odpowiedni kontener opisu
+            let lastClickedIcon = document.querySelector('.' + target + '-active'); // Pobierz ostatnio klikniętą ikonę w tej sekcji
+    
+            // Jeśli ta sama ikona została kliknięta dwa razy z rzędu, ukryj opis i dezaktywuj ikonę
+            if (lastClickedIcon === icon) {
+                descriptionBox.textContent = ''; // Usuń opis
+                descriptionBox.style.display = 'none'; // Ukryj kontener
+                icon.classList.remove('active'); // Usuń wyróżnienie
+                icon.classList.remove(target + '-active'); // Usuń oznaczenie aktywności w sekcji
+            } else {
+                descriptionBox.textContent = text; // Zmień tekst w kontenerze na opis
+                descriptionBox.style.display = 'block'; // Pokaż kontener
+    
+                // Usuń aktywne wyróżnienie z poprzedniej ikonki w tej sekcji
+                if (lastClickedIcon) {
+                    lastClickedIcon.classList.remove('active');
+                    lastClickedIcon.classList.remove(target + '-active');
+                }
+    
+                // Dodaj wyróżnienie do klikniętej ikonki
+                icon.classList.add('active');
+                icon.classList.add(target + '-active'); // Zaznacz aktywną ikonę w danej sekcji
+            }
+        });
+    });
+    
+            // Animacja fade-out przy kliknięciu w linki
+            document.querySelectorAll('.link').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.body.classList.add('fade-out'); // Uruchom animację
+                    window.location.href = link.getAttribute('href');
+                });
+            });
+    
+            // Animacja fade-in przy załadowaniu strony
+            window.onload = function() {
+                document.body.classList.add('active');
+            };
+        
+            
+        
+        
+        </script>
+        <script>
+            // Function to detect if the device is a phone or tablet
+            function detectDevice() {
+                const width = window.innerWidth;
+                const isPhone = width <= 1024; // Devices with width 480px or less are considered phones
+                const isTablet = width > 1024 && width <= 1280; // Devices between 481px and 768px are considered tablets
+        
+                const sidenav = document.querySelector('.sidenav');
+                const content = document.querySelector('.content');
+        
+                // Adjust styles based on device type
+                if (isPhone) {
+                    applyPhoneStyles(sidenav, content);
+                } else if (isTablet) {
+                    applyTabletStyles(sidenav, content);
+                } else {
+                    applyDesktopStyles(sidenav, content);
+                }
+            }
+        
+            // Styles for phones
+            function applyPhoneStyles(sidenav, content) {
+                sidenav.style.width = "100%";
+                sidenav.style.height = "auto";
+                sidenav.style.position = "absolute";
+                sidenav.style.top = "0";
+                sidenav.style.left = "0";
+                sidenav.style.transition = "none"; // Remove hover transition
+                sidenav.style.boxShadow = "none";
+        
+                const links = sidenav.querySelectorAll('a');
+                links.forEach(link => {
+                    link.style.padding = "10px";
+                    link.style.fontSize = "12px";
+                });
+        
+                const images = sidenav.querySelectorAll('img');
+                images.forEach(img => {
+                    img.style.width = "20px";
+                    img.style.height = "20px";
+                });
+        
+                content.style.marginTop = "60px"; // Push content down
+                content.style.marginLeft = "0"; // Full-width content
+            }
+        
+            // Styles for tablets
+            function applyTabletStyles(sidenav, content) {
+                sidenav.style.width = "80px";
+                sidenav.style.position = "absolute";
+                sidenav.style.height = "100vh";
+        
+                const links = sidenav.querySelectorAll('a');
+                links.forEach(link => {
+                    link.style.padding = "15px";
+                    link.style.fontSize = "14px";
+                });
+        
+                const images = sidenav.querySelectorAll('img');
+                images.forEach(img => {
+                    img.style.width = "30px";
+                    img.style.height = "30px";
+                });
+        
+                content.style.marginLeft = "80px";
+            }
+        
+    
+        
+            // Call detectDevice on page load and resize
+            window.addEventListener('load', detectDevice);
+            window.addEventListener('resize', detectDevice);
+        </script>
+    
+    </body>
+    </html>

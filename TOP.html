@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Top</title>
+    <link rel="icon" type="image/x-icon" href="im/lol.png">
+    <meta name="keywords" content="LOL, League of Legends, poradnik lol">
+
+    <style>
+        /* Stylizacja dla sekcji z dwoma kolumnami */
+        .content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .garen-section {
+            text-align: center;
+            width: 48%; /* Połowa szerokości dla lewej i prawej kolumny */
+        }
+    </style>
+</head>
+<body class="fade-in">
+
+    <div class="sidenav">
+        <ul>
+            <h1>Menu</h1>
+            <li>
+                <a href="index.html" class="link">
+                  <img src="im/lol.png" alt="MAIN">
+                  <span>MAIN</span>
+                </a>
+            </li>
+            <li>
+                <a href="JUNGLE.html" class="link">
+                  <img src="im/jg.png" alt="JUNGLE">
+                  <span>JUNGLE</span>
+                </a>
+            </li>
+            <li>
+                <a href="MID.html" class="link">
+                  <img src="im/mid.png" alt="MID">
+                  <span>MID</span>
+                </a>
+            </li>
+            <li>
+                <a href="BOT.html" class="link">
+                  <img src="im/bot.png" alt="BOTTOM">
+                  <span>BOTTOM</span>
+                </a>
+            </li>
+            <li>
+                <a href="SUP.html" class="link">
+                  <img src="im/sup.png" alt="SUPPORT">
+                  <span>SUPPORT</span>
+                </a>
+				
+			</li>
+			<li>
+                <a href="#" id="music-button" class="link">
+                    <img src="im/nuta.png" alt="Włącz muzykę" class="music-icon">
+                    <span>MUZA</span>
+                </a>
+            </li>
+		</ul>
+    </div>
+
+	<div id="music-notes-container"></div>
+    
+    <div class="content">
+        <!-- Lewa kolumna: Garen i umiejętności -->
+        <div class="garen-section">
+            <h1> <img src="im/garen.png" alt="GAREN" height="500px" width="450px" class="icon" ></h1>
+
+            <p>
+                <img src="im/garenp.png" alt="GARENP" height="75px" width="75px" class="skill-icon" data-text=
+                "Garen regeneruje 0.4% / 0,8% / 2.0% maksymalnego zdrowia co sekundę, gdy nie otrzymuje obrażeń z dowolnego źródła przez 9 / 6 / 4 sek." data-target="left-description"> &nbsp;
+                
+                <img src="im/garenq.png" alt="GARENQ" height="75px" width="75px" class="skill-icon" data-text=
+                "Aktywna: Garen uwalnia się spod działania wszystkich efektów spowalniających i zyskuje 30% premii do prędkości ruchu. Jego następny atak podstawowy wykonany w ciągu 4.5 sekundy zadaje zwiększone obrażenia fizyczne i ucisza cel na 1.5 sekundy.
+                Obrażenia fizyczne: 30 / 45 / 60 / 75 / 90 (+140% obrażeń ataku)
+                Prędkość ruchu: 1,5 / 2 / 2,5 / 3 / 3,5 sek."data-target="left-description"> &nbsp;
+                
+                
+                <img src="im/garenw.png" alt="GARENW" height="75px" width="75px" class="skill-icon" data-text=
+                "Bierna: Garen stale zyskuje +0.2 pancerza i odporności na magię (+1 w przypadku bohaterów i dużych oraz potężnych potworów) gdy zabije wroga.
+                Aktywna: Garen zyskuje tarczę ochronną na kilka sekund, która zmniejsza otrzymywane obrażenia o 30%.
+                Czas trwania efektu: 2 / 3 / 4 / 5 / 6 sek." data-target="left-description"> &nbsp;
+                
+                
+                <img src="im/garene.png" alt="GARENE" height="75px" width="75px" class="skill-icon" data-text=
+                "Aktywna: Garen zaczyna wirować mieczem przez 3 sekundy, zadając obrażenia fizyczne na każdy takt wszystkim wrogom w zasięgu. Gdy Osąd trafia tylko 1 cel, to zadaje o 33% więcej obrażeń.
+                Średnica obszaru działania: 330
+                Obrażenia fizyczne na takt (kilka celów): 14 / 18 / 22 / 26 / 30 (+34 / 35 / 36 / 37 / 38% obrażeń ataku)
+                Obrażenia fizyczne na takt (jeden cel): 18,62 / 23,94 / 29,26 / 34,58 / 39,9 (+45,22 / 46,55 / 47,88 / 49,21 / 50,54% obrażeń ataku)
+                Prędkość wirowania maksymalna ilość taktów zwiększa się wraz z poziomem i maksymalnie wynosi 5 / 6 / 7 / 8 / 9 / 10 taktów.
+                Garen może anulować Osąd w każdej chwili, skracając umiejętność o pozostały czas trwania." data-target="left-description"> &nbsp;
+                
+                <img src="im/garenr.png" alt="GARENR" height="75px" width="75px" class="skill-icon" data-text=
+                "Bierne: Wróg, który ostatnio zabije sojuszniczego bohatera, staje się Czarnym Charakterem. Garen zadaje dodatkowe obrażenia nieuchronne Czarnym Charakterom równe 1% maksymalnego zdrowia celu.
+                Aktywna: Garen przywołuje Potęgę Demacii, by wykonać ostateczny cios wrogiemu bohaterowi, zadając obrażenia magiczne w zależności od tego, jak bardzo ranny jest przeciwnik. Jeżeli cel jest Czarnym Charakterem, to obrażenia stają się nieuchronne.
+                Zasięg: 400. Obrażenia magiczne/nieuchronne: 175 / 350 / 525 (+ 28,57 / 33,33 / 40% brakującego zdrowia celu)" data-target="left-description">
+                
+            </p>
+
+            <!-- Kontener na dynamiczny opis pod obrazkami -->
+            <div id="left-description" class="skill-description"></div>
+        </div>
+
+        <!-- Prawa kolumna: Drugi Garen i umiejętności -->
+        <div class="garen-section">
+            <h1> <img src="im/malp.png" alt="MALP" height="500px" width="450px" class="icon"></h1>
+        
+            <p>
+                <img src="im/malpp.png" alt="MALPHITEP" height="75px" width="75px" class="skill-icon" data-text=
+                "Malphite zyskuje zwiększoną pancerz, a jego podstawowe ataki zadają dodatkowe obrażenia magiczne, gdy trafia wrogów. Zyskuje dodatkowe obrażenia w zależności od zdobytej pancerz. Jego pasywne umiejętności zwiększają odporność na obrażenia fizyczne." data-target="right-description"> &nbsp;
+                
+                <img src="im/malpq.png" alt="MALPHITEQ" height="75px" width="75px" class="skill-icon" data-text=
+                "Aktywna: Malphite uderza w ziemię, zadając obrażenia magiczne i spowalniając wszystkich wrogów w obszarze uderzenia na 2 sekundy. Dodatkowo, zyskuje pancerz na podstawie zadanego obrażenia. 
+                Obrażenia magiczne: 60 / 100 / 140 / 180 / 220 (+70% mocy umiejętności). 
+                Spowolnienie: 30 / 40 / 50 / 60 / 70%." data-target="right-description"> &nbsp;
+                
+                <img src="im/malpw.png" alt="MALPHITEW" height="75px" width="75px" class="skill-icon" data-text=
+                "Aktywna: Malphite przekształca część swojego pancerza w obrażenia fizyczne przez 5 sekund. Wzmocnione podstawowe ataki Malphite zadają dodatkowe obrażenia magiczne wrogom, którzy są ogłuszeni. 
+                Obrażenia fizyczne: 30 / 50 / 70 / 90 / 110 (+80% pancerza). 
+                Obrażenia magiczne: 15 / 30 / 45 / 60 / 75." data-target="right-description"> &nbsp;
+            
+                <img src="im/malpe.png" alt="MALPHITEE" height="75px" width="75px" class="skill-icon" data-text=
+                "Aktywna: Malphite zyskuje mocne obrażenia magiczne, a jego obrażenia od umiejętności wzrastają o 50% na następne 4 sekundy. Gdy cel jest w obszarze, umiejętność ta zadaje dodatkowe obrażenia. 
+                Obrażenia magiczne: 75 / 125 / 175 / 225 / 275 (+75% mocy umiejętności). 
+                Zasięg: 900." data-target="right-description"> &nbsp;
+            
+                <img src="im/malpr.png" alt="MALPHITER" height="75px" width="75px" class="skill-icon" data-text=
+                "Aktywna: Malphite skacze w wybrane miejsce, uderzając w ziemię i zadając obrażenia magiczne wszystkim wrogom w obszarze. Wszyscy wrogowie w zasięgu są ogłuszani przez 1,5 sekundy. 
+                Obrażenia magiczne: 200 / 350 / 500 (+100% mocy umiejętności)." data-target="right-description">
+            </p>
+
+            <!-- Kontener na dynamiczny opis pod obrazkami -->
+            <div id="right-description" class="skill-description"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <!-- Left Section: Window Dimensions -->
+        <div class="footer-left">
+            <p id="window-dimensions"></p>
+        </div>
+    
+        <!-- Center Section: Visit Counter -->
+        <div class="footer-center">
+            <p id="visit-counter"></p>
+        </div>
+    
+        <!-- Right Section: Author Information -->
+        <div class="footer-right">
+            <h1>Autor: Maciej i Maks</h1>
+        </div>
+    
+        <!-- JavaScript for Dynamic Content -->
+        <script>
+            // Display window dimensions
+            document.getElementById("window-dimensions").innerHTML =
+                "Szerokość okna: " + window.innerWidth + "px<br>" +
+                "Wysokość okna: " + window.innerHeight + "px";
+    
+            // Initialize visit counter from localStorage or start at 0
+            let visitCount = localStorage.getItem('visitCount');
+            if (visitCount === null) {
+                visitCount = 0;
+            }
+    
+            // Increment the visit count
+            visitCount++;
+    
+            // Save updated visit count back to localStorage
+            localStorage.setItem('visitCount', visitCount);
+    
+            // Display the visit count
+            document.getElementById("visit-counter").innerHTML = "Liczba odwiedzin: " + visitCount;;
+        </script>
+    </div>
+
+    <script>
+
+    
+        
+        const musicNotesContainer = document.getElementById('music-notes-container');
+        const noteImages = ['im/note1.png', 'im/note2.png', 'im/note3.png', 'im/note4.png']; // Ścieżki do obrazków nutek
+        
+        function createMusicNote() {
+            const img = document.createElement('img');
+            img.src = noteImages[Math.floor(Math.random() * noteImages.length)]; // Wybieranie losowego obrazka
+            img.classList.add('music-note');
+            
+            // Ustawienie losowej pozycji startowej
+            img.style.left = Math.random() * 100 + 'vw'; // Losowa pozycja horyzontalna
+            img.style.animationDuration = Math.random() * 3 + 2 + 's'; // Losowa prędkość spadania
+        
+            musicNotesContainer.appendChild(img);
+        
+            // Usuń nutkę, gdy skończy animację
+            setTimeout(() => {
+                img.remove();
+            }, 5000); // 5 sekund odpowiada animacji
+        }
+        
+        // Funkcje odtwarzania i zatrzymywania muzyki
+        let audio = new Audio('im/pif.mp3'); // Zmień na ścieżkę do pliku muzycznego
+    
+        function playMusic() {
+            audio.play();
+            audio.loop = true; 	
+	}
+    
+        function stopMusic() {
+            audio.pause();
+        }
+    
+        // Wywołuj nutki co 500 ms
+        let musicPlaying = false;
+        let noteInterval;
+        
+        document.getElementById('music-button').addEventListener('click', function(e) {
+            e.preventDefault(); // Aby nie ładowało się z powrotem na górę strony
+    
+            if (!musicPlaying) {
+                noteInterval = setInterval(createMusicNote, 200);
+                playMusic();
+                musicPlaying = true;
+            } else {
+                clearInterval(noteInterval);
+                stopMusic();
+                musicPlaying = false;
+            }
+        });
+        
+
+    
+        // Funkcja do dynamicznej zmiany tekstu przy kliknięciu na obrazki
+const skillIcons = document.querySelectorAll('.skill-icon');
+
+// Ukryj kontenery opisu na początku
+document.getElementById('left-description').style.display = 'none';
+document.getElementById('right-description').style.display = 'none';
+
+skillIcons.forEach(function(icon) {
+    // Gdy użytkownik klika na obrazek
+    icon.addEventListener('click', function() {
+        const text = icon.getAttribute('data-text');
+        const target = icon.getAttribute('data-target'); // Pobierz identyfikator kontenera opisu
+        const descriptionBox = document.getElementById(target); // Pobierz odpowiedni kontener opisu
+        let lastClickedIcon = document.querySelector('.' + target + '-active'); // Pobierz ostatnio klikniętą ikonę w tej sekcji
+
+        // Jeśli ta sama ikona została kliknięta dwa razy z rzędu, ukryj opis i dezaktywuj ikonę
+        if (lastClickedIcon === icon) {
+            descriptionBox.textContent = ''; // Usuń opis
+            descriptionBox.style.display = 'none'; // Ukryj kontener
+            icon.classList.remove('active'); // Usuń wyróżnienie
+            icon.classList.remove(target + '-active'); // Usuń oznaczenie aktywności w sekcji
+        } else {
+            descriptionBox.textContent = text; // Zmień tekst w kontenerze na opis
+            descriptionBox.style.display = 'block'; // Pokaż kontener
+
+            // Usuń aktywne wyróżnienie z poprzedniej ikonki w tej sekcji
+            if (lastClickedIcon) {
+                lastClickedIcon.classList.remove('active');
+                lastClickedIcon.classList.remove(target + '-active');
+            }
+
+            // Dodaj wyróżnienie do klikniętej ikonki
+            icon.classList.add('active');
+            icon.classList.add(target + '-active'); // Zaznacz aktywną ikonę w danej sekcji
+        }
+    });
+});
+
+        // Animacja fade-out przy kliknięciu w linki
+        document.querySelectorAll('.link').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.body.classList.add('fade-out'); // Uruchom animację
+                window.location.href = link.getAttribute('href');
+            });
+        });
+
+        // Animacja fade-in przy załadowaniu strony
+        window.onload = function() {
+            document.body.classList.add('active');
+        };
+        
+    
+        
+    
+    
+    </script>
+    <script>
+        // Function to detect if the device is a phone or tablet
+        function detectDevice() {
+            const width = window.innerWidth;
+            const isPhone = width <= 1024; // Devices with width 480px or less are considered phones
+            const isTablet = width > 1024 && width <= 1280; // Devices between 481px and 768px are considered tablets
+    
+            const sidenav = document.querySelector('.sidenav');
+            const content = document.querySelector('.content');
+    
+            // Adjust styles based on device type
+            if (isPhone) {
+                applyPhoneStyles(sidenav, content);
+            } else if (isTablet) {
+                applyTabletStyles(sidenav, content);
+            } else {
+                applyDesktopStyles(sidenav, content);
+            }
+        }
+    
+        // Styles for phones
+        function applyPhoneStyles(sidenav, content) {
+            sidenav.style.width = "100%";
+            sidenav.style.height = "auto";
+            sidenav.style.position = "absolute";
+            sidenav.style.top = "0";
+            sidenav.style.left = "0";
+            sidenav.style.transition = "none"; // Remove hover transition
+            sidenav.style.boxShadow = "none";
+    
+            const links = sidenav.querySelectorAll('a');
+            links.forEach(link => {
+                link.style.padding = "10px";
+                link.style.fontSize = "12px";
+            });
+    
+            const images = sidenav.querySelectorAll('img');
+            images.forEach(img => {
+                img.style.width = "20px";
+                img.style.height = "20px";
+            });
+    
+            content.style.marginTop = "60px"; // Push content down
+            content.style.marginLeft = "0"; // Full-width content
+        }
+    
+        // Styles for tablets
+        function applyTabletStyles(sidenav, content) {
+            sidenav.style.width = "80px";
+            sidenav.style.position = "absolute";
+            sidenav.style.height = "100vh";
+    
+            const links = sidenav.querySelectorAll('a');
+            links.forEach(link => {
+                link.style.padding = "15px";
+                link.style.fontSize = "14px";
+            });
+    
+            const images = sidenav.querySelectorAll('img');
+            images.forEach(img => {
+                img.style.width = "30px";
+                img.style.height = "30px";
+            });
+    
+            content.style.marginLeft = "80px";
+        }
+    
+
+    
+        // Call detectDevice on page load and resize
+        window.addEventListener('load', detectDevice);
+        window.addEventListener('resize', detectDevice);
+    </script>
+    <script>
+
+</script>
+
+
+
+
+
+    
+
+
+
+
+</body>
+</html>
