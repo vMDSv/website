@@ -508,4 +508,117 @@ h1 {
     display: block;
 }
 
+/* For tablet devices */
+@media screen and (max-width: 1024px) {
+    .sidenav {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        padding: 5px 0;
+        background: linear-gradient(180deg, rgba(5, 15, 28, 0.9), rgba(0, 0, 0, 0.8)); /* Adjusted background */
+        border-right: none; /* Remove the glowing border */
+        border-bottom: 2px solid rgba(0, 255, 128, 0.7); /* Add glowing bottom border */
+        z-index: 1000; /* Ensure it appears above content */
+        overflow: hidden; /* Prevent overflow */
+    }
 
+    .sidenav h1 {
+        display: none; /* Hide sidebar title */
+    }
+
+    .sidenav ul {
+        display: flex;
+        justify-content: space-around; /* Spread out items */
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .sidenav li {
+        flex: 1;
+        margin: 0;
+        text-align: center;
+    }
+
+    .sidenav img {
+        width: 28px; /* Smaller icon size */
+        height: 28px;
+    }
+
+    .sidenav a {
+        font-size: 12px; /* Smaller font size */
+        padding: 5px; /* Adjust padding */
+    }
+
+    .sidenav span {
+        font-size: 11px; /* Smaller text description */
+    }
+
+    .content {
+        margin-left: 0;
+        padding-top: 60px; /* Add padding to avoid overlapping sidenav */
+    }
+}
+
+/* For phone devices */
+@media screen and (max-width: 900px) {
+    .sidenav {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        padding: 5px 0;
+        background: linear-gradient(180deg, rgba(5, 15, 28, 0.9), rgba(0, 0, 0, 0.8)); /* Adjusted background */
+        border-right: none; /* Remove the glowing border */
+        border-bottom: 2px solid rgba(0, 255, 128, 0.7); /* Add glowing bottom border */
+        z-index: 1000; /* Ensure it appears above content */
+        overflow: hidden; /* Prevent overflow */
+    }
+
+    .sidenav h1 {
+        display: none; /* Hide sidebar title */
+    }
+
+    .sidenav ul {
+        display: flex;
+        justify-content: space-between; /* Spread items evenly */
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .sidenav li {
+        flex: 1;
+        margin: 0;
+        text-align: center;
+    }
+
+    .sidenav img {
+        width: 24px; /* Even smaller icon size */
+        height: 24px;
+    }
+
+    .sidenav a {
+        font-size: 10px; /* Smaller font size */
+        padding: 5px; /* Adjust padding */
+    }
+
+    .sidenav span {
+        display: none; /* Hide text descriptions for simplicity */
+    }
+
+    .content {
+        margin-left: 0;
+        padding-top: 50px; /* Add padding to avoid overlapping sidenav */
+    }
+
+    .footer {
+        font-size: 10px; /* Smaller font for footer text */
+        padding: 5px 10px; /* Smaller padding */
+    }
+}
